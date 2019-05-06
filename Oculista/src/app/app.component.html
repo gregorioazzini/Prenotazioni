@@ -1,0 +1,25 @@
+  <div class="container">
+    <form class="jumbotron">
+        <h2 class="display-4">Prenotazioni</h2>
+        <h2 class="display-4">Inserisci i dati per poter prenotare la tua visita</h2>
+        <div class="form-group">
+         Nome: <input name="nome" #nome class="form-control"><br><br>
+         Cognome: <input name="cognome" #cognome class="form-control"><br><br>
+         Indirizzo: <input name="indirizzo" #indirizzo class="form-control"><br><br>
+         Telefono: <input name="telefono" #telefono class="form-control"><br><br>
+         Email:  <input name="email" #email class="form-control"><br><br>
+         DataPrenotazione <input name="dataprenotazione" #data class="form-control" type="Date"><br><br>
+         OraPrenotazione <input name="oraprenotazione" #ora class="form-control" type="time"><br><br>
+        <input type="submit" (click)="Prenota(nome, cognome, indirizzo, telefono, email, data, ora)" value="invia">
+        </div>
+    </form>
+  </div>
+
+  <div *ngFor="let a of appuntamento">
+    {{a | json}}
+    </div>
+
+  <!--<div class="jumbotron">
+    <app-appuntamento>
+    </app-appuntamento>
+  </div>-->
